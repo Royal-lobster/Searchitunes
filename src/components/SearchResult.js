@@ -24,7 +24,7 @@ function SearchResult({ trackArt, trackName, artistName }) {
         <img
           className="searchResult__img"
           src={trackArt}
-          alt={`${trackName} image`}
+          alt={`${trackName}`}
         />
         <Details>
           <h3 className="searchResult__title">{trackName}</h3>
