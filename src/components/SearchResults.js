@@ -16,7 +16,11 @@ function SearchResults({ results }) {
       ))}
       {!results ? (
         <center>
-          <img className="searchResults__indicator" src={illustration} />
+          <img
+            className="searchResults__indicator"
+            src={illustration}
+            alt="illustration"
+          />
         </center>
       ) : (
         <p></p>
