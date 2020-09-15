@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+}
+.search__title {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+.search__input {
+  border: none;
+  padding: 4px;
+  background: white;
+  border-radius: 8px;
+  width: min(500px, 80vw);
+  text-align: center;
+  border: 2px dashed #000;
+}

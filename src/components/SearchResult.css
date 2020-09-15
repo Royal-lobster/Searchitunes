@@ -1,0 +1,14 @@
+.searchResult {
+  margin: 0 10px;
+}
+.searchResult__img {
+  border-radius: 8px;
+  width: 60px;
+}
+.searchResult__title {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.searchResult__artistName {
+  margin-bottom: 0;
+}
