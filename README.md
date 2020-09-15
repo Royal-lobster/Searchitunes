@@ -3,4 +3,4 @@ check out live version here: https://search-itunes.netlify.app/
 <br>
 <br>
 
-<img src="./screenshot.png">
+<img src="./interface.png">
