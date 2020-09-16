@@ -7,7 +7,7 @@ import SearchResults from "./SearchResults";
 import themeSwitch from "../assets/half.svg";
 function App() {
   return (
-    <Layout>
+    <Layout className="app">
       <img
         src={themeSwitch}
         className="app__themeSwitch"
