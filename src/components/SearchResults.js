@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import SearchResult from "./SearchResult";
 import "./SearchResults.css";
 import illustration from "../assets/search-illustration.png";
+import FlipMove from "react-flip-move";
+
 function SearchResults({ results }) {
   return (
     <div className="searchResults">
@@ -11,15 +13,17 @@ function SearchResults({ results }) {
       ) : (
         <p></p>
       )}
-      {results?.map((result) => (
-        <SearchResult
-          key={result.trackId + result.artistId}
-          trackArt={result.artworkUrl100}
-          trackName={result.trackName}
-          artistName={result.artistName}
-          trackLink={result.previewUrl}
-        />
-      ))}
+      <FlipMove>
+        {results?.map((result) => (
+          <SearchResult
+            key={result.trackId + result.artistId}
+            trackArt={result.artworkUrl100}
+            trackName={result.trackName}
+            artistName={result.artistName}
+            trackLink={result.previewUrl}
+          />
+        ))}
+      </FlipMove>
       {!results ? (
         <center>
           <img

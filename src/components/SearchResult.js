@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import "./SearchResult.css";
 const Card = styled.div`
@@ -24,28 +24,30 @@ const Details = styled.div`
   font-family: "Lato", sans-serif;
 `;
 
-function SearchResult({ trackArt, trackName, artistName, trackLink }) {
-  return (
-    <div className="searchResult">
-      <a href={trackLink} target="_blank" rel="noopener noreferrer">
-        <Card>
-          <img
-            className="searchResult__img"
-            src={trackArt}
-            alt={`${trackName}`}
-          />
-          <Details>
-            <p className="searchResult__title">
-              {trackName.replace(/^(.{20}[^\s]*).*/, "$1")}
-            </p>
-            <p className="searchResult__artistName">
-              {artistName.replace(/^(.{20}[^\s]*).*/, "$1")}
-            </p>
-          </Details>
-        </Card>
-      </a>
-    </div>
-  );
-}
+const SearchResult = forwardRef(
+  ({ trackArt, trackName, artistName, trackLink }, ref) => {
+    return (
+      <div className="searchResult" ref={ref}>
+        <a href={trackLink} target="_blank" rel="noopener noreferrer">
+          <Card>
+            <img
+              className="searchResult__img"
+              src={trackArt}
+              alt={`${trackName}`}
+            />
+            <Details>
+              <p className="searchResult__title">
+                {trackName.replace(/^(.{20}[^\s]*).*/, "$1")}
+              </p>
+              <p className="searchResult__artistName">
+                {artistName.replace(/^(.{20}[^\s]*).*/, "$1")}
+              </p>
+            </Details>
+          </Card>
+        </a>
+      </div>
+    );
+  }
+);
 
 export default SearchResult;
