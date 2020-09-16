@@ -27,7 +27,7 @@ const Details = styled.div`
 function SearchResult({ trackArt, trackName, artistName, trackLink }) {
   return (
     <div className="searchResult">
-      <a href={trackLink} target="_blank">
+      <a href={trackLink} target="_blank" rel="noopener noreferrer">
         <Card>
           <img
             className="searchResult__img"
