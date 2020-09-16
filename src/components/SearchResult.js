@@ -48,7 +48,7 @@ const SearchResult = forwardRef(
       >
         {/* <a href={trackLink} target="_blank" rel="noopener noreferrer"> */}
         <Card>
-          <audio id={trackName} src={trackLink}></audio>
+          <audio id={trackName} title={trackName} src={trackLink}></audio>
           <img
             className="searchResult__img"
             src={trackArt}
