@@ -10,6 +10,13 @@ const Card = styled.div`
   border-radius: 10px;
   max-width: 500px;
   padding: 8px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #222;
+    color: #eee;
+  }
 `;
 
 const Details = styled.div`
@@ -17,20 +24,26 @@ const Details = styled.div`
   font-family: "Lato", sans-serif;
 `;
 
-function SearchResult({ trackArt, trackName, artistName }) {
+function SearchResult({ trackArt, trackName, artistName, trackLink }) {
   return (
     <div className="searchResult">
-      <Card>
-        <img
-          className="searchResult__img"
-          src={trackArt}
-          alt={`${trackName}`}
-        />
-        <Details>
-          <h3 className="searchResult__title">{trackName}</h3>
-          <p className="searchResult__artistName">{artistName}</p>
-        </Details>
-      </Card>
+      <a href={trackLink} target="_blank">
+        <Card>
+          <img
+            className="searchResult__img"
+            src={trackArt}
+            alt={`${trackName}`}
+          />
+          <Details>
+            <p className="searchResult__title">
+              {trackName.replace(/^(.{20}[^\s]*).*/, "$1")}
+            </p>
+            <p className="searchResult__artistName">
+              {artistName.replace(/^(.{20}[^\s]*).*/, "$1")}
+            </p>
+          </Details>
+        </Card>
+      </a>
     </div>
   );
 }

@@ -1,6 +1,18 @@
 .searchResult {
   margin: 0 10px;
 }
+.searchResult a {
+  color: #222;
+}
+.searchResults__inst {
+  text-align: center;
+  background-color: #fff;
+  width: 200px;
+  padding: 5px;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0 auto 20px auto;
+}
 .searchResult__img {
   border-radius: 8px;
   width: 60px;
