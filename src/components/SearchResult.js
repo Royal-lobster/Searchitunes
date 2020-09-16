@@ -37,10 +37,10 @@ const SearchResult = forwardRef(
             />
             <Details>
               <p className="searchResult__title">
-                {trackName.replace(/^(.{20}[^\s]*).*/, "$1")}
+                {trackName?.replace(/^(.{20}[^\s]*).*/, "$1")}
               </p>
               <p className="searchResult__artistName">
-                {artistName.replace(/^(.{20}[^\s]*).*/, "$1")}
+                {artistName?.replace(/^(.{20}[^\s]*).*/, "$1")}
               </p>
             </Details>
           </Card>
