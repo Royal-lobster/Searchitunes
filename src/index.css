@@ -5,3 +5,12 @@
 body {
   background-color: #f0f2f5;
 }
+html[theme="dark-mode"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+html[theme="dark-mode"] .searchResult__img {
+  filter: invert(1) hue-rotate(180deg);
+}
+html {
+  transition: color 300ms, background-color 300ms;
+}

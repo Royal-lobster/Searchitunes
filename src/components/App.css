@@ -1,0 +1,7 @@
+.app__themeSwitch {
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
