@@ -7,7 +7,6 @@ import notFoundImg from "../assets/results-notfound.png";
 import FlipMove from "react-flip-move";
 
 function SearchResults({ results }) {
-  console.log(results);
   return (
     <div className="searchResults">
       {results?.length !== 0 && results !== undefined ? (
