@@ -15,7 +15,10 @@
 }
 .searchResult__img {
   border-radius: 8px;
+  height: 60px;
   width: 60px;
+  object-fit: contain;
+  background-color: #e3e4e6;
 }
 .searchResult__title {
   font-weight: 600;
