@@ -36,18 +36,15 @@ const SearchResult = forwardRef(
       document.getElementById(trackName).play();
     }
     return (
-      <div
-        className="searchResult"
-        ref={ref}
-        onClick={() => {
-          // when clicked stop all audio playing.
-          stopPrevious();
-          // after stopping all play only present audio
-          play();
-        }}
-      >
-        {/* <a href={trackLink} target="_blank" rel="noopener noreferrer"> */}
-        <Card>
+      <div className="searchResult" ref={ref}>
+        <Card
+          onClick={() => {
+            // when clicked stop all audio playing.
+            stopPrevious();
+            // after stopping all play only present audio
+            play();
+          }}
+        >
           <audio id={trackName} title={trackName} src={trackLink}></audio>
           <img
             className="searchResult__img"
@@ -63,7 +60,6 @@ const SearchResult = forwardRef(
             </p>
           </Details>
         </Card>
-        {/* </a> */}
       </div>
     );
   }
