@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import "./Search.css";
 function Search({ searchKeyword, setSearchkeyword, setSearchResults }) {
   const uri =
-    "https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=";
+    "https://corsyproxyfoxy.herokuapp.com/https://itunes.apple.com/search?term=";
 
   const handleSubmit = (e) => {
     e.preventDefault();
